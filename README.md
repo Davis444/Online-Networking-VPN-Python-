@@ -41,6 +41,28 @@ You can configure the Flask API endpoint in the `vpn_app.py` file by modifying t
 
 ## Flask API Code
 
+3. Enter the VPN server address, username, and password in the respective fields.
+4. Click on the "Connect" button to establish the VPN connection.
+
+## Features
+
+- GUI interface using tkinter for user interaction.
+- Sends a POST request to the Flask API with VPN credentials.
+- Displays connection status and messages using tkinter messagebox.
+
+## Dependencies
+
+- tkinter: Python's standard GUI library.
+- requests: HTTP library for making API requests.
+- Flask: Web framework for creating the VPN API.
+- flask_cors: Flask extension for handling Cross-Origin Resource Sharing (CORS).
+
+## Configuration
+
+You can configure the Flask API endpoint in the `vpn_app.py` file by modifying the `API_ENDPOINT` variable.
+
+## Flask API Code
+
 ```python
 from flask import Flask, request, jsonify
 from flask_cors import CORS
@@ -50,11 +72,22 @@ CORS(app)  # Enable CORS for all routes
 
 @app.route('/connect_to_vpn', methods=['POST'])
 def connect_to_vpn():
- # Your VPN connection logic here
- return jsonify({"message": "Successfully connected to VPN"}), 200
+ server_address = request.json.get('server_address')
+ username = request.json.get('username')
+ password = request.json.get('password')
+
+ if server_address and username and password:
+     # Your VPN connection logic here
+     # Example: Connect to VPN using server_address, username, and password
+     # VPNConnection.connect(server_address, username, password)
+
+     return jsonify({"message": "Successfully connected to VPN"}), 200
+ else:
+     return jsonify({"error": "Please provide all the required information"}), 400
 
 if __name__ == '__main__':
  app.run(debug=True)
+
 
 ```
 
