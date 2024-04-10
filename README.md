@@ -1,6 +1,5 @@
 # VPN Connection App
-
-This Python application provides a GUI interface to connect to a VPN using a Flask API.
+### This Python application provides a user-friendly GUI interface to connect to a Virtual Private Network (VPN) using a Flask API backend. Users can enter their VPN server address, username, and password through the GUI, and the app sends a secure POST request to the Flask API to establish the VPN connection. The app also handles error cases, such as missing information or failed connection attempts, and displays relevant messages to the user using tkinter messagebox.
 
 ## Installation
 
