@@ -22,22 +22,6 @@ This Python application provides a GUI interface to connect to a VPN using a Fla
 3. Enter the VPN server address, username, and password in the respective fields.
 4. Click on the "Connect" button to establish the VPN connection.
 
-## Features
-
-- GUI interface using tkinter for user interaction.
-- Sends a POST request to the Flask API with VPN credentials.
-- Displays connection status and messages using tkinter messagebox.
-
-## Dependencies
-
-- tkinter: Python's standard GUI library.
-- requests: HTTP library for making API requests.
-- Flask: Web framework for creating the VPN API.
-- flask_cors: Flask extension for handling Cross-Origin Resource Sharing (CORS).
-
-## Configuration
-
-You can configure the Flask API endpoint in the `vpn_app.py` file by modifying the `API_ENDPOINT` variable.
 
 ## Flask API Code
 
