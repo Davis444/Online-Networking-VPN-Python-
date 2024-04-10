@@ -57,15 +57,15 @@ if __name__ == '__main__':
  app.run(debug=True)
 
 ```
-Replace the placeholder Your VPN connection logic here with your actual VPN connection logic inside the connect_to_vpn route.
 
-Contributing
+
+##Contributing
 Fork the repository.
 Create a new branch (git checkout -b feature/your_feature).
 Commit your changes (git commit -am 'Add new feature').
 Push to the branch (git push origin feature/your_feature).
 Create a new Pull Request.
-License
+##License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 
